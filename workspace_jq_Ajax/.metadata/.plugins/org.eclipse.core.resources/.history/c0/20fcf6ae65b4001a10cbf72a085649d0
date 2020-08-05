@@ -1,4 +1,0 @@
-function makeTable(elem){
-	//var 없이도 변수 선언가능
-	$table = $("<table border=1>")
-}
