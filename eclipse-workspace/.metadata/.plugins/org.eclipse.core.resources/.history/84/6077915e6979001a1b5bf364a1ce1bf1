@@ -1,0 +1,23 @@
+package com.silsub2.student.controller;
+
+
+import java.util.Scanner;
+
+import com.silsub2.student.model.vo.Students;
+
+public class TestStudentArray {
+
+	public static void main(String[] args) {
+		Students[] st = new Students[10];
+		Scanner sc = new Scanner(System.in);
+		int sum = 0;
+		
+		while (sum <st.length) {
+			st[0] = new Students(3 , 2 , "김승진" , 95 , 100 , 96);
+			
+			System.out.println("계속 하시겠습니까? ( y || n )");
+		}
+		
+	}
+
+}

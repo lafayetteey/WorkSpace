@@ -1,0 +1,27 @@
+package com.silsub2.student.controller;
+
+
+import java.util.Scanner;
+
+import com.silsub2.student.model.vo.Students;
+
+public class TestStudentArray {
+
+	public static void main(String[] args) {
+		Students[] st = new Students[10];
+		Scanner sc = new Scanner(System.in);
+		String answer = " ";
+		int i = 1;
+		
+		do {
+			System.out.print("첫번째 학생: ");
+			st[0] = new Students(sc.nextInt() , sc.nextInt() , sc.next() , 
+					sc.nextInt() , sc.nextInt(), sc.nextInt());
+			
+			System.out.println("계속하시겠습니까? ( y || n )");
+			
+		} while(answer.equals("y") || answer.equals("Y"));
+		
+	}
+
+}

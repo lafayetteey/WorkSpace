@@ -1,0 +1,12 @@
+package com.io.silsub1.model.dao;
+
+public class FileIOTest {
+	
+	public void fileSave() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}	
