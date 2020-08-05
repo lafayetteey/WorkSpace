@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <script type="text/javascript">
+        function locTest(){
+           // location.href ="https://www.google.com"
+            //location.assign("https://www.naver.com");
+
+
+            //replace() : 현재단계를 replace하기 때문에 뒤로가기(전단계) 가 없음
+            //location.replace("https://www.daum.net");
+            location.reload();
+        }
+    
+    </script>
+</head>
+<body>
+    <a href="http://www.naver.com" target="_blank">네이버로 이동</a>
+    <button onclick="locTest();">Click!</button>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion 02</title>
+    <style type="text/css">
+        img{
+            width: 150px;
+            height: 150px;
+            float: left;
+        }
+        #menubox{ position: relative;}
+        #menu{ overflow: auto;}
+        .sel{
+            width: 140px;
+            height: 140px;
+            border: 5px dotted yellow;
+            position: absolute;
+            left: 300px;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            margin-left: 300px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            //특정시간마다 함수를 작동시킬때 사용
+            setInterval(function(){
+                var div = $("#menu");
+                //appendTo() : 선택된 태그를 마지막에 추가한다.
+                //id=menu 인 div 맨 마지막에 class =active인 태그를 추가한다
+                $(".active").first().appendTo(div);
+            }, 500);
+            $("button").click(function() {
+                $("img").toggleClass("active");
+
+                if($("button").text() == "Start") {
+                    $("button").text("Stop");
+                } else {
+                    $("button").text("Start");
+                    alert("오늘의 사진" +( $("img:eq(2)").attr("alt"))+" 입니다.");
+                }
+            })
+        })
+    
+    </script>
+</head>
+<body>
+    <h1>이미지를 선택해주세요</h1>
+
+    <div id="menubox">
+        <div class="sel"></div>
+        <div id="menu">
+            <img alt="꽃1" src="image/img01.PNG">
+            <img alt="꽃2" src="image/img02.PNG">
+            <img alt="꽃3" src="image/img03.PNG">
+            <img alt="꽃4" src="image/img04.PNG">
+            <img alt="꽃5" src="image/img05.PNG">
+        </div>
+    </div>
+    <br>
+    <button>Start</button>
+</body>
+</html>

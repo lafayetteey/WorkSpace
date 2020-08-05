@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 03</title>
+    <style type="text/css">
+        .box{
+            width: 500px;
+            height: 50px;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(255, 230, 0);
+            display: none;
+        }
+        fieldset{
+            width: 400px;
+            margin: 10px;
+            background-color: rgb(202, 200, 200);
+        }
+        legend{
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        //element안에는 클릭된 input 태그가 들어가 있다.
+        function showDiv(element){
+            console.log(element);
+
+            if(element.checked == true && element.value == "title") {
+                document.getElementById("titleBox").style.display="block";
+                document.getElementById("dateBox").style.display="none";
+                document.getElementById("writerBox").style.display="none";
+            }
+            if(element.checked == true && element.value == "date") {
+                document.getElementById("dateBox").style.display="block";
+                document.getElementById("titleBox").style.display="none";
+                document.getElementById("writerBox").style.display="none";
+            }
+            if(element.checked == true && element.value == "writer") {
+                document.getElementById("writerBox").style.display="block";
+                document.getElementById("titleBox").style.display="none";
+                document.getElementById("dateBox").style.display="none";
+            }
+        }
+    
+    </script>
+</head>
+<body>
+    <h1>연습 3</h1>
+    <fieldset> 
+        <legend>검색할 항목을 선택하세요</legend>
+        <input type="radio" name="category" value="title" onclick="showDiv(this);" id="title">
+        <label for="title">제목</label>&nbsp;&nbsp;
+        <input type="radio" name="category" value="date" onclick="showDiv(this);" id="date">
+        <label for="date">날짜</label>&nbsp;&nbsp;
+        <input type="radio" name="category" value="writer" onclick="showDiv(this);" id="writer">
+        <label for="writer">작성자</label>
+    </fieldset> 
+    <hr>
+    <div id="titleBox" class="box">
+        <form>
+            <label>검색할 제목을 입력하세요 : </label>
+            <br> 
+            <input type="search" name="title" size="50">
+            <input type="submit" value="검색"> 
+        </form>
+    </div>
+    <div id="dateBox" class="box">
+        <form>
+            <label>검색할 날짜를 입력하세요 : </label>
+            <br>
+            <input type="date" name="start"> - <input type="date" name="end">
+            <input type="submit" value="검색">
+        </form>
+    </div>
+    <div id="writerBox" class="box">
+        <form>
+            <label>검색할 작성자명을 입력하세요 : </label>
+            <br>
+            <input type="search" name="writer" size="50">
+            <input type="submit" value="검색">
+        </form>
+    </div>
+</body>
+</html>

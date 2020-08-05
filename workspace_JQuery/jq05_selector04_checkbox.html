@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector 04</title>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        //모든경우의 함수를 적용
+        $(function(){
+
+            //해당 form(id=signal)에서 submit 이벤트가 발생 시 아래 function 이 작동한다.
+            $("#signal").submit(function(){
+                if($(".infobox").val() == null || $(".infobox").val()=="") {
+                    $(".error").show();
+                    return false;
+                }
+            });
+
+            $("#confirm").click(function() {
+                //result div안 내용을 지우기 : empty()
+                //$("#result").empty()
+                //checkbox 중 선택된게 없을 경우
+                if( $("input[name=chk]:checked").length == 0) {
+                    alert("하나 이상 선택 해 주세요");
+                } else{
+                    //object 또는 배열 안 데이터를 꺼낼 때 마다 : each(); 
+                    //for문처럼 사용가능하지만 i 값을 function의 매개변수로 준다. 
+                    //for문처럼 증감식은 사용하지 않는다.
+                    $("input[name=chk]:checked").each(function(i) {
+                        var chk =  $("input[name=chk]:checked").eq(i);
+                        //input 태그의 다음에 위치한 b 태그의 텍스트를 가져온다.
+                        var book = chk.next().text();
+                        //input태그의 value 값을 가져온다.
+                        var price = chk.val();
+                        $("#result").append(book+"가격"+price+"<br>");
+                    });
+                }
+            })
+
+            //chk 라는 checkbox가 click 이 될때 작동하는 함수
+            $("input[name=chk]").click(function(){
+                if( $("input[name=chk]").length == $("input[name=chk]:checked") ) {
+                    $("input[name=all]").prop("checked" , true);
+                } else {
+                    $("input[name=all]").prop("checked" , false);
+                }
+            });
+
+        });
+
+        function allchk(check) {
+            $("input[name=chk]").each(function(){
+                $(this).prop("checked" , check);
+            });
+        }
+        
+    </script>
+</head>
+<body>
+    <!--get : 쿼리문을 그대로 보여준다  post : 숨겨서 보여준다.-->
+    <form action="" id="signal" method="get">
+        <div>
+            <span class="label">UserID : </span>
+            <input type="text" class="infobox" name="userid">
+            <span class="error" style="color: red; display: none;">
+            반드시 입력하세요.</span>
+        </div>
+        <input type="submit" class="submit" value="입력">
+    </form>
+    <hr>
+    <fieldset style="width:300px;">
+        <legend style="text-align: center;">체크 여부 확인</legend>
+        <input type="checkbox" name="all" onclick="allchk(this.checked);">전체선택<br>
+        <input type="checkbox" name="chk" value="20000">
+        <b>java</b><br>
+        <input type="checkbox" name="chk" value="25000">
+        <b>JS</b><br>
+        <input type="checkbox" name="chk" value="30000">
+        <b>Spring</b><br>
+
+        <input type="button" value="확인" id="confirm"><br>
+        <span>선택한 책 가격<span>
+        <div id="result"></div>
+    </fieldset>
+</body>
+</html>

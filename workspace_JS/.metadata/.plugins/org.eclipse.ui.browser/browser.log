@@ -1,0 +1,14 @@
+
+6월 15, 2020 12:41:06.23 NEW SESSION
+6월 15, 2020 12:41:06.23 [15268:12844:0615/124106.226:ERROR:data_pack.cc(120)] Could not open pak file for writing: 요청한 작업은, 사용자가 매핑한 구역이 열려 있는 상태인 파일에서 수행할 수 없습니다. (0x4C8)
+6월 15, 2020 12:42:13.74 [9900:14524:0615/124213.740:ERROR:data_pack.cc(120)] Could not open pak file for writing: 요청한 작업은, 사용자가 매핑한 구역이 열려 있는 상태인 파일에서 수행할 수 없습니다. (0x4C8)
+6월 15, 2020 12:46:28.22 [6312:7444:0615/124628.227:ERROR:data_pack.cc(120)] Could not open pak file for writing: 요청한 작업은, 사용자가 매핑한 구역이 열려 있는 상태인 파일에서 수행할 수 없습니다. (0x4C8)
+6월 15, 2020 13:37:33.93 [8348:8224:0615/133733.929:ERROR:data_pack.cc(120)] Could not open pak file for writing: 요청한 작업은, 사용자가 매핑한 구역이 열려 있는 상태인 파일에서 수행할 수 없습니다. (0x4C8)
+
+6월 16, 2020 08:42:53.72 NEW SESSION
+6월 16, 2020 08:42:53.72 [4420:6940:0616/084253.720:ERROR:cache_util_win.cc(21)] Unable to move the cache: 액세스가 거부되었습니다. (0x5)
+6월 16, 2020 08:42:53.75 [4420:6940:0616/084253.721:ERROR:cache_util.cc(139)] Unable to move cache folder C:\Users\gabriel\AppData\Local\Google\Chrome\User Data\ShaderCache\GPUCache to C:\Users\gabriel\AppData\Local\Google\Chrome\User Data\ShaderCache\old_GPUCache_000
+6월 16, 2020 08:42:53.78 [4420:6940:0616/084253.721:ERROR:disk_cache.cc(184)] Unable to create cache
+6월 16, 2020 08:42:53.87 [9136:8696:0616/084253.870:ERROR:data_pack.cc(120)] Could not open pak file for writing: 요청한 작업은, 사용자가 매핑한 구역이 열려 있는 상태인 파일에서 수행할 수 없습니다. (0x4C8)
+6월 16, 2020 08:42:53.90 [4420:6940:0616/084253.721:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+6월 16, 2020 08:42:54.43 기존 브라우저 세션에서 여는 중입니다.

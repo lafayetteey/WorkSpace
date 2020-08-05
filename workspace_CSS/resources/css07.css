@@ -1,0 +1,31 @@
+#logo{
+    float: left;
+}
+#login{
+    float:right
+}
+header>h1{
+    float: left;
+    text-align: center;
+    margin: 0 30%; 
+}
+header>ul{
+    clear: both;
+    list-style-type: none;
+}
+.content{
+    height: 400px;
+    width: 100%;
+    background-color: rebeccapurple;
+}
+footer{
+    background-color: skyblue;
+    width: 100%;
+    height: 80%;
+    padding-top: 3%;
+}
+header>ul>li{
+    list-style-type: none;
+    margin-left: 10%;
+    display: inline-block;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prac2</title>
+    <style type="text/css">
+        .logo{
+            float: left;
+        }
+        #login{
+            float: right;
+        }
+        header>h1{
+            float: left;
+            text-align: center;
+            margin: 0 25%;
+        }
+        header>ul{
+            list-style-type: none;
+            clear: both;
+        }
+        .content{
+            height: 500px;
+            width: 100%;
+            background-color: aqua;
+        }
+        footer{
+            background-color: aquamarine;
+            width: 100%;
+            height: 80%;
+            padding-top: 3%;
+        }
+        header>ul>li{
+            list-style-type: none;
+            text-decoration: none;
+            margin-left: 10%;
+            display: inline-block;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <header>
+    <img class="logo" src="https://brayve.net/wp-content/uploads/2019/06/4004/the-secret-history-of-the-google-logo.jpg-23keepProtocol" 
+    width="350px" height="80px">
+    <h1>M A I N</h1>
+    <table id="login">
+        <tr>
+            <th><label for="id">ID</label> <input type="text" id="id" 
+                placeholder="ID를 입력하세요"></th>
+        </tr>
+        <tr>
+            <th><label>PW</label> <input type="password" id="pw"
+                placeholder="pw를 입력하세요"></th>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Login">
+            <input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+    <ul>
+        <li>메인</li>
+        <li>공지사항</li>
+        <li>게시판</li>
+        <li>갤러리</li>
+        <li>회원관리</li>
+        <li>채팅</li>
+    </ul>
+</header>
+<section class="content">Contents contents</section>
+<footer>Copyright &copy; all right reserved</footer>
+</body>
+</html>

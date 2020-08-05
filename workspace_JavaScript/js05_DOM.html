@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        p{
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript" src="js/DOM01.js">
+    </script>
+</head>
+<body>
+    <p>DOM : Document Object Model 탐색 메소드</p>
+    <p id="test" onclick="searchId();">1. 엘리먼트의 id로 탐색 : 
+            엘리먼트 하나를 선택(중복불가) - 반환값 또한 하나</p>
+    
+    <p onclick="searchName();">2. 엘리먼트의 name 으로 탐색 : 
+        엘리먼트의 여러개 선택 - 반환 : 배열(nodeList)<br>
+        <input type="text" name="test02" value=""><br>
+        <input type="text" name="test02" value=""><br>
+        <input type="text" name="test02" value=""><br>
+    </p>
+
+    <p onclick="searchTagName();">3. 엘리먼트의 태그 이름으로 탐색 :
+            엘리먼트 여러개 선택 - 반환 : 배열형태로 반환됨(nodeList)</p>
+    <p></p>
+</body>
+</html>

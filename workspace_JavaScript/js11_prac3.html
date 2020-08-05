@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        fieldset{
+            width: 400px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: rgb(197, 194, 194);
+            padding: 10px;
+            margin: 10px;
+        }
+        legend{
+            text-align: center;
+        }
+        .radio{
+           display: inline-block;
+           margin-right: 3%;
+        }
+        #select01{
+            background-color: rgb(255, 230, 0);
+            width: 450px;
+            padding: 10px;
+            margin: 10px;
+            position: absolute;
+        }
+        #select02{
+            background-color:  rgb(255, 230, 0);
+            width: 450px;
+            padding: 10px;
+            margin: 10px;
+            position: absolute;
+        }
+        #select03{
+            background-color: rgb(255, 230, 0);
+            width: 450px;
+            padding: 10px;
+            margin: 10px;
+            position: absolute;
+        }
+
+        
+    </style>
+
+    <script type="text/javascript">
+        function radio01(){
+            var check = document.getElementsByName("radio");
+            console.log(check);
+            var select01 = document.getElementById("select01");
+            var select02 = document.getElementById("select02");
+            var select03 = document.getElementById("select03");
+
+            if(check[0].checked == true){
+                select01.style.display="block";
+                select02.style.display="none";
+                select03.style.display="none";
+            } else if (check[1].checked == true) {
+                select02.style.display="block";
+                select01.style.display="none";
+                select03.style.display="none";
+            } else if (check[2].checked == true){
+                select03.style.display="block";
+                select01.style.display="none";
+                select02.style.display="none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>검색할 항목을 선택하세요</legend>
+            <input type="radio" name="radio" value="제목" id="sc1" onclick="radio01();">&nbsp;&nbsp;<label for="sc1">제목</label>
+            <input type="radio" name="radio" value="날짜" id="sc2" onclick="radio01();">&nbsp;&nbsp;<label for="sc2">날짜</label>
+            <input type="radio" name="radio" value="작성자" id="sc3" onclick="radio01();">&nbsp;&nbsp;<label for="sc3">작성자</label>
+        </fieldset>
+    </form>
+    <hr>
+    <div id="select01" style="display: none;">
+        <label>검색할 제목을 입력하세요 : </label>
+        <br>
+        <input type="text" id="text01" size="50">
+        <input type="submit" value="검색">
+    </div>
+    <div id="select02" style="display: none;">
+        <label>검색할 날짜를 선택하세요 : </label>
+        <br>
+        <input type="date"> - <input type="date"> 
+        <input type="submit" value="검색">
+    </div>
+    <div id="select03" style="display: none;">
+        <label>검색할 아이디를 입력하세요 : </label>
+        <br>
+        <input type="text" id="text02" size="50">
+        <input type="submit" value="검색">
+    </div>
+</body>
+</html>

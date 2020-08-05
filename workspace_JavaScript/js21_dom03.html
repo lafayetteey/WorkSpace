@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Test03</title>
+    <style type="text/css">
+        img , #imgView{
+            width: 300px;
+            height: 300px;
+        }
+        #imgView{
+            background-color: lightgray;
+        }
+    </style>
+    <script type="text/javascript">
+        function creatImg() {
+            var radios = document.getElementsByName("rdiBtn");
+            var radioVal = "";
+           
+            for(var i=0; i<radios.length; i++) {
+                if(radios[i].checked) {
+                    //미리 생성해놓은 radioVal 변수에 이미지 경로를 저장한다.
+                    radioVal = "image/"+radios[i].value;   
+                    break;
+                }
+            }
+            //1. img 태그생성
+            var img = document.createElement("img");
+            //2.img태그에 src 속성 만들어서 radioVal 값에 넣어주기
+            img.setAttribute("src" , radioVal);
+            //3.미리 생성한 img 태그를 새로 생성한 img 태그와 바꿔주기
+            var div = document.getElementById("imgView");
+            var chd = document.querySelector("#imgView > img");
+            //4. imgView div에 바꿀 img 와 chd 태그 넣어주기
+            div.replaceChild(img,chd);
+        }
+
+        function deleteImg() {
+            //querySelector 로 img 태그를 가져온 후 
+            var img = document.querySelector("#imgView>img");
+            //setAttribute 로 경로를 초기화 해준다.
+            img.setAttribute("src" , "");
+        }
+    </script>
+</head>
+<body>
+    <input type="radio" name="rdiBtn" value="img01.png"/>그림1<br>
+    <input type="radio" name="rdiBtn" value="img02.png"/>그림2<br>
+    <input type="radio" name="rdiBtn" value="img03.png"/>그림3<br>
+
+    <button onclick="creatImg();">이미지 생성하기</button>
+    <button onclick="deleteImg();">이미지 삭제하기</button>
+    <br><br>
+    <div id="imgView"><img src=""></div>
+</body>
+</html>

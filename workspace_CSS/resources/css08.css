@@ -1,0 +1,10 @@
+fieldset{
+    border: 0;
+    background-color: aqua;
+}
+form{
+    background-color: aquamarine;
+    width: 350px;
+    border-radius: 10px;
+    padding: 30px;
+}

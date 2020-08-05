@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2</title>
+    <style type="text/css">
+        #area1{
+            border: 1px solid black;
+            width: 300px;
+            height: 100px;
+        }
+    
+    </style>
+    <script type="text/javascript" src="js/DOM02.js"></script>
+</head>
+<body>
+    <h2>ID로 접근하기</h2>
+    <div id="area1" class="area"></div>
+    <button onclick="searchId();">아이디로 접근하기</button>
+    <hr>
+    <h2>이름으로 접근하기</h2>
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+    </ul>
+    <button onclick="searchTagName();">태그명으로 접근하기</button>
+    <h3>이름으로 접근</h3>
+    <form>
+        <fieldset>
+            <legend>취미</legend>
+            <table>
+                <tr>
+                    <td><input type="checkbox" name="hobby" value="game" id="game" />게임</td>
+                    <td><input type="checkbox" name="hobby" value="music" id="music" />음약감상</td>
+                    <td><input type="checkbox" name="hobby" value="movie" id="movie" />영화감상</td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <br>
+    <div id="area2" class="area"></div>
+    <button onclick="searchName();">이름으로 접근</button>
+</body>
+</html>

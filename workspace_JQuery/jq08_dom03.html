@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 03</title>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            //div 자식 태그 중 property tagName 이 SPAN인 태그를 선택
+            $("div").children().click(function(){
+                if( $(this).prop("tagName")=="SPAN" ) {
+                    alert("span태그 클릭");
+                }
+                 //div 자식 태그 중 p태그가 있을 경우
+                if($(this).is("p")) {
+                $(this).css("background-color" , "skyblue");
+                }
+            });
+            //인덱스 0번째 p태그와 add 한 pan 태그의 글자색을 red 로 변경
+            $("b").click(function(){
+            $("p:eq(0)").add("span").css("color","red");
+
+         })
+        })
+        
+    </script>
+</head>
+<body>
+    <div>
+        <p>add()</p>
+        <span style="cursor: pointer;">add():
+            선택한 엘리먼트에 추가적으로 select한 표현식을 작성할 때 사용한다.
+        </span>
+        <p>is()</p>
+        <b>선택한 엘리먼트 중에 구하는 엘리먼트가 있는지 확인</b>
+    </div>
+</body>
+</html>

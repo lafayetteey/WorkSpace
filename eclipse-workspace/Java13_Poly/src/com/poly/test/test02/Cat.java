@@ -1,0 +1,12 @@
+package com.poly.test.test02;
+
+public class Cat extends Base {
+	@Override
+	public void start() {
+		System.out.println("고양이가 걷는다.");
+	}
+	@Override 
+	public void stop() {
+		System.out.println("고양이가 멈췄다.");
+	}
+}

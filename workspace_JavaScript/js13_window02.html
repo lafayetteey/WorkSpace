@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var ids = ["java" , "script" , "css" , "jdbc" , "oracle"];
+        function idchk(){
+            var id = document.getElementsByName("id")[0].value;
+            var div = document.getElementsByTagName("div")[0];
+            alert(div);
+            if(ids.indexOf(id) != -1) {
+                div.innerHTML = "<b>해당 아이디는 이미 존재 합니다.</b>";
+            } else {
+                var userId = "사용할 수 있는 아이디 입니다." +"<input type='button' value='확인' "
+                +"onclick='insertId(\"" + id +"\")'>";
+                div.innerHTML = userId;
+            }
+        }
+        function insertId(id){
+            console.log(id);
+            opener.document.getElementsByName("id")[0].value=id;
+            opener.document.getElementsByName("pwd")[0].focus();
+            close();
+        }
+    
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" name="id">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+             <input type="button" value="중복확인" onclick="idchk();">
+             <input type="button" value="취소" onclick="self.close();" >
+            </td>
+        </tr>
+    </table>
+    <div></div>
+</body>
+</html>
